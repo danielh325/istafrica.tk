@@ -101,7 +101,7 @@
     justify-content: space-between;
     align-items: center;
     background: white;
-    height: 75px;
+    height: 80px;
     position: fixed;
     top: 0;
     z-index: 999;
@@ -119,10 +119,11 @@
 
   .logoimage {
     width: auto;
-    height: 75px;
+    height: 80px;
     background-color: white;
     position: fixed;
     top: 0;
+    left: 8;
   }
   
   .nav-links {
@@ -136,7 +137,7 @@
   
   .nav-links ul li {
     list-style: none;
-    padding: 10px 20px;
+    padding: 12px 20px;
     display: inline-block;
   }
   
