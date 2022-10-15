@@ -26,22 +26,22 @@
     height: 240px;
     color: #000;
     border-radius: 50%;
-    animation: ring 2s linear infinite;
+    animation: ring 1.3s linear infinite;
     z-index: 100;
   }
 
   @keyframes ring {
     0% {
       transform: rotate(0deg);
-      box-shadow: 2px 5px 8px #ffc800;
+      box-shadow: 3px 5px 4px #ffc800;
     }
     50% {
       transform: rotate(180deg);
-      box-shadow: 2px 5px 4px #19b900;
+      box-shadow: 3px 5px 4px #19b900;
     }
     100% {
       transform: rotate(360deg);
-      box-shadow: 2px 5px 4px #00a6ff;
+      box-shadow: 3px 5px 4px #009dff;
     }
   }
 
@@ -53,23 +53,22 @@
     height: 100%;
     width: 100%;
     border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
   }
 
   span {
-    color: #737373;
+    color: #787878;
     font-size: 27px;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 200px; 
-    animation: text 3s ease-in-out linear infinite;
-    z-index: 100;
+    animation: text 2s ease-in-out infinite;
   }
 
   @keyframes text {
     0% {
-      color: #737373;
+      color: #797979
     }
     50% {
       color: white;
