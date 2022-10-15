@@ -19,16 +19,6 @@
     position: absolute;
     z-index: 100;
   }
-    
-  .logoimage {
-    position: fixed;
-    background-color: white;
-    top: 0;
-    left: 0;
-    height: 75px;
-    width: auto;
-    z-index: 200;
-  }
 
   .ring {
     position: absolute;
@@ -124,6 +114,7 @@
     position: fixed;
     top: 0;
     left: 8;
+    z-index: 200;
   }
   
   .nav-links {
