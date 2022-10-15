@@ -1,0 +1,331 @@
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1{
+    font-size: 37px;
+    font-weight: 800;
+    color: midnightblue;
+    padding-bottom: 30px;
+}
+
+p {
+    color: rgb(116, 129, 143);
+    font-size: 17px;
+    font-weight: 400;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+} 
+
+
+nav {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    height: 75px;
+    position: fixed;
+    top: 0;
+    z-index: 90;
+    width: 100%;
+    box-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
+
+.logoimage {
+    width: auto;
+    height: 75px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+}
+
+.nav-links {
+    max-width: 1050px;
+    align-items: baseline;
+    position: fixed;
+    right: 0;
+    top: 0;
+    
+}
+
+.nav-links ul li {
+    list-style: none;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.nav-links ul li a{
+    color: midnightblue;
+    text-decoration: none;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+
+.head {
+height: 45%;
+width: 100%;
+background-size: cover;
+background-position: center;
+background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.8)), 
+    url('https://www.istafrica.co.tz/uploaded/images_2017-18/web/IST_0025_copy.jpg');
+position: relative;
+}
+
+.bar {
+border-radius: 10;
+padding-bottom: 98%;
+}
+
+.bar ul {  
+background-color: white; 
+position: absolute;
+top: 37%;
+left: 7%;
+list-style: none;
+box-shadow:  7.1px 4.7px 8.8px rgba(0, 0, 0, 0.055), 35px 23px 70px rgba(0, 0, 0, 0.11);
+z-index: 5;
+}
+
+.bar ul a {
+color: rgb(31, 31, 31);
+font-size: 19px;
+font-weight: 500;
+padding: 1em 130px 1em 40px;
+display: block;
+letter-spacing: 0.015em;
+}
+
+.bar ul a {
+text-decoration: none;
+color: #000;
+}
+
+.bar ul a:first-child {
+background-color: #026f00;
+color: white;
+padding: 0.9em ;
+text-transform: uppercase;
+font-size: 24px;
+font-weight: 500;
+}
+
+.bar ul a:hover {
+background-color: #026f00;
+color: white;
+transition: 0.2s;
+}
+
+.path ul {
+display: flex;
+float: right;
+position:absolute;
+top: 38%;
+left: 28%;
+color: white;
+}
+
+.path ul li {
+padding-left: 20px;
+list-style: none;
+font-size: 20px;
+}
+
+.path ul li a {
+text-decoration: underline;
+font-weight: 400;
+color:#ffa600;
+}
+
+.path ul li a:hover {
+color: #00a6ff ;
+}
+
+.content-3 {
+max-width: 68%;
+float: right;
+position: absolute;
+top: 53%;
+right: 3%;
+line-height: 40px;
+text-align: center;
+}
+
+.content-3 h2 {
+color: midnightblue;
+font-size: 35px;
+font-weight: 700;
+margin-top: 20px;
+}
+
+.content-3 h3 {
+color: black;
+padding-block: 30px;
+width: 90%;
+margin-left: 5%;
+}
+
+.content-3-img {
+    width: 85%;
+    margin-block: 8px;
+}
+
+.partnership {
+    text-align: center;
+}
+
+.partnership h1 {
+    font-size: 22px;
+    padding: 0;
+}
+
+.partnership p {
+    font-size: 15px;
+    font-weight: 700;
+    padding: 0;
+}
+
+.footer {
+    background-color: rgb(47, 61, 75);
+    padding: 65px 0;
+    line-height: 1.5;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.container-row {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-col {
+    width: 25% 24% 25% 29% ;
+    padding: 0 70px;
+}
+
+.footer-col h4 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: -10;
+    background-color: rgb(0, 199, 0);
+    height: 4px;
+    width: 75px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 7px;
+}
+
+.footer-col ul li {
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: 400;
+    color: #bbbbbb;
+    display: block;
+}
+
+.footer-col ul li a{
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: 400;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    padding-left: 10px;
+    color: white;
+}
+
+.footer-col .social-links a {
+    font-size: 24px;
+    display: inline-flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px 20px 0;
+    text-align: center;
+    line-height: 80px;
+    height: 48px;
+    width: 48px;
+    background-color: rgb(255, 183, 0);
+    border-radius: 50%;
+    color: white;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: orange;
+    background-color: white;
+
+}
+
+.underev {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.underev h4{
+    color: white;
+    padding: 11px;
+}
+
+.myname {
+    text-align: right;
+    color: white;
+}
+
+#affiliates-boxes-container {
+display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.affiliate-box {
+display: block;
+color: transparent;
+width: 120px;
+height: 120px;
+padding: 3px;
+margin: 6px;
+margin-bottom: 15px;
+background-position: center;
+background-size: 100%;
+background-repeat: no-repeat;
+box-sizing: border-box;
+}
+
+.affiliate-box:hover {
+box-sizing:border-box;
+border: 2.7px solid;
+border-radius: 20%;
+transition: 0.3s;
+border-color: orange rgb(0, 0, 196) black rgb(0, 199, 0);
+}
