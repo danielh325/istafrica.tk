@@ -17,7 +17,15 @@
     align-items: center;
     min-height: 100vh;
     position: absolute;
-    z-index: 100;
+  }
+    
+  .logoimage {
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    height: 75px;
+    width: auto;
   }
 
   .ring {
@@ -26,22 +34,21 @@
     height: 240px;
     color: #000;
     border-radius: 50%;
-    animation: ring 1.3s linear infinite;
-    z-index: 100;
+    animation: ring 2s linear infinite;
   }
 
   @keyframes ring {
     0% {
       transform: rotate(0deg);
-      box-shadow: 3px 5px 4px #ffc800;
+      box-shadow: 2px 5px 8px #ffc800;
     }
     50% {
       transform: rotate(180deg);
-      box-shadow: 3px 5px 4px #19b900;
+      box-shadow: 2px 5px 4px #19b900;
     }
     100% {
       transform: rotate(360deg);
-      box-shadow: 3px 5px 4px #009dff;
+      box-shadow: 2px 5px 4px #00a6ff;
     }
   }
 
@@ -53,22 +60,21 @@
     height: 100%;
     width: 100%;
     border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
   }
 
   span {
-    color: #787878;
-    font-size: 27px;
-    font-weight: 500;
+    color: #737373;
+    font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 200px; 
-    animation: text 2s ease-in-out infinite;
+    animation: text 3s ease-in-out linear infinite;
   }
 
   @keyframes text {
     0% {
-      color: #797979
+      color: #737373;
     }
     50% {
       color: white;
@@ -81,7 +87,7 @@
     background-size: cover;
     background-position: center;
     background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.8)), 
-      url('https://www.istafrica.co.tz/uploaded/images_2017-18/web/ist_0931.jpg');
+      url("school.jpeg");
     }
   
   
@@ -90,54 +96,69 @@
     justify-content: space-between;
     align-items: center;
     background: white;
-    height: 80px;
+    height: 75px;
     position: fixed;
     top: 0;
-    z-index: 999;
+    z-index: 2;
     width: 100%;
-    box-shadow: 0 0 8px rgba(0,0,0,0.4);
+  
   }
   
-  .fa fa-bars {
-    display: none;
-  }
-
-  .fa-bars::before {
-    content: "" !important;
-  }
-
   .logoimage {
     width: auto;
-    height: 80px;
+    height: 75px;
     background-color: white;
     position: fixed;
     top: 0;
-    left: 8;
-    z-index: 200;
   }
   
   .nav-links {
-    max-width: 1050px;
+    max-width: 1100px;
     align-items: baseline;
     position: fixed;
     right: 0;
     top: 0;
-    
+
   }
   
   .nav-links ul li {
     list-style: none;
-    padding: 12px 20px;
+    padding: 14px 18px;
     display: inline-block;
   }
   
   .nav-links ul li a{
     color: midnightblue;
     text-decoration: none;
-    font-size: 27px;
+    font-size: 26px;
     font-weight: 600;
   }
+  
+  .nav-links ul li ::after {
+    content: '';
+    width: 0%;
+    height: 5.5px;
+    background:rgb(1, 174, 9);
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+  }
+  
+  .nav-links ul li :hover::after {
+    width: 100%;
+  }
 
+  .sub-menu-1 {
+    display: none;
+  }
+  
+  .nav-links ul li ::after .sub-menu-1 ul {
+    display: block;
+    background-color: green;
+    color: white;
+    position: relative;
+  } 
+  
   .text-box {
     width: 90%;
     color: white;
@@ -167,7 +188,7 @@
     font-size: 16px;
     max-width: 700px;
   }
-  
+
   .visitus {
     display: inline-flex;
     color: white;
@@ -183,73 +204,19 @@
   }
   
   .visitus:hover {
-    border-radius: 20px;
-    border: 1px solid rgb(128, 210, 74);
-    background: rgb(128, 210, 74);
-    transition: 1s;
+    border: 2px solid rgb(18, 202, 0);
+    background: rgb(18, 202, 0);
+    transition: 0.7s;
   }
   
-
-
-
-
-
+  
   
   @media(max-width: 700px) {
-
-    .header {
-      width: 100%;
-      background-size: cover;
-      background-position: center;
-    }
-    .nav {
-      width: 100%;
-    }
-
-    .fa fa-bars {
-      display: block;
-    }
-
-    .fa-bars::before {
-      content: "\f0c9" !important;
-    }
-
-    .text-box h2 {
-    font-size: 50px;
-    line-height: 65px;
-    }
-
-    p {
-      max-width: 100%;
-    }
-
     .text-box h1 {
-      font-size: 20px;
-      font-weight: 400;
-      padding: 0;
+    font-size: 30px;
     }
-
-    .course {
-      min-width: 100%;
-    }
-
-    .visitus {
-      background-color: rgb(128, 210, 74);
-      margin: 35px auto;
-      border: none;
-    }
-    .nav-links ul li::after {
-      content: '';
-      width: 100%;
-      height: 3px;
-      background: rgb(0, 180, 0);
-      display: block;
-      margin: auto;
-      transition: 0.5s;
-    }
-
-    .nav-links ul li:hover::after {
-      width: 100%;
+    .nav-links ul li {
+      display: none;
     }
     
     .nav-links {
@@ -261,13 +228,6 @@
       right: -300px;
       text-align: left;
       z-index: 2;
-      position: fixed;
-      padding: 30px;
-    }
-
-    .nav {
-      position: fixed;
-      z-index: 100;
     }
     nav.fa {
       display: block;
@@ -275,179 +235,10 @@
       margin: 10px;
       cursor: pointer;
     }
-
-    .course h1 {
-      font-size: 24px;
-      padding: auto;
-    }
-
-    .course p {
-      font-size: 100%;
-      text-align: justify;
-      padding-bottom: 20px;
-    }
-
-    .course-col p {
+    
+    .nav-links{
       padding: 30px;
-      text-align: center;
     }
-
-    .row, .images {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .course-col {
-      width: 350px !important;
-      
-    }
-
-    .course {
-      width: 100%;
-    }
-
-    .images h2 {
-      margin-bottom: 30px;
-      font-size: 1.7rem !important;
-    }
-
-    .campus {
-      min-width: 95%;
-    }
-
-    .campus p {
-      min-width: 93%;
-      padding: 0;
-      padding-block: 30px;
-      text-align: justify;
-    }
-
-    .ib {
-      margin-top: 40px !important;
-    }
-
-    .admission h1 {
-      font-size: 38px !important ;
-      padding: 20px !important;
-    }
-
-    .admission {
-      padding-top: 50px !important;
-    }
-
-    .admission p {
-      padding: 0;
-      min-width: 90%;
-      font-weight: 600;
-      text-align: center;
-    }
-
-    .moving-buttons .admission .button {
-      background-color: #000;
-    }
-
-    .moving-buttons span {
-      width: 100% !important;
-    }
-
-    .admission button {
-      border: none !important;
-      margin: 28px !important;
-    }
-
-    iframe {
-      width: 100% !important;
-      height: 50% !important;
-      text-align: center;
-      padding: 0%;
-      margin: 20px 0 0;
-    }
-
-    .container {
-      padding: 5px !important;
-    }
-
-    .site-main-header h1 {
-      font-size: 42px !important;
-      padding: 0 0 20px !important;
-    }
-
-    .container-row {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .footer-col {
-      margin-block: 10px;
-      padding: 0 40px !important;
-      font-size: 16px !important;
-    }
-
-    .footer {
-      padding: 35px 0 0 !important;
-    }
-
-    .partnership {
-      padding-top: 40px !important;
-    }
-
-    .partnership p {
-      width: 100% !important;
-      font-size: 12px !important;
-      padding-block: 8px !important;
-    }
-
-    .underev {
-      font-size: 12px;
-    }
-
-    .site-main {
-      margin-top: 30px !important;
-    }
-
-    .col-1-2 {
-      min-width: 100% !important;
-      padding: 0 !important;
-      margin: 0;
-      font-size: 15px;
-    }
-
-    .affiliate-box {
-      width: 80px !important;
-      height: 80px !important;
-    }
-}
-
-
-
-
-
-  .sub-about-us ul:hover {
-    display: none;
-  }
-
-  .sub-about-us ul li:hover {
-    display: block;
-    color: white;
-    padding-block: 5px;
-  }
-
-  .sub-about-us ul li a:hover {
-    color: white;
-    margin-bottom: 5px;
-    font-size: 20px;
-    border-bottom: 2px solid whitesmoke;
-
-  }
-
-  .sub-about-us:hover {
-    display: block;
-    background-color: rgb(0, 163, 0);
-    position: absolute;
-    top: 65;
-    width: 500px;
   }
   
   
@@ -456,21 +247,21 @@
     width: 80%;
     margin: auto;
     text-align: center;
-    padding-top: 90px;
+    padding-top: 130px;
     position: relative;
     flex-wrap: wrap;
   }
   
   h1{
-    font-size: 37px;
-    font-weight: 800;
+    font-size: 40px;
+    font-weight: 900;
     color: midnightblue;
-    padding-top: 30px;
+    padding-bottom: 30px;
   }
   
   p{
     color: slategray;
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 200;
     padding: 30px;
     text-align: center;
@@ -486,29 +277,28 @@
   }
   
   .course-col {
+    flex-basis: 31%;
     background: whitesmoke;
-    border-radius: 17px;
+    border-radius: 10px;
     margin: 20px 12px;
     color: black;
     transition: 0.5s;
-    flex-wrap: wrap;
-    width: 31%;
   }
   
   h3{
     text-align: center;
     font-weight: 700;
+    padding-top: 20px;
     font-size: 28px;
-    padding-top: 10px;
   }
   
   .course-col:hover {
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2)
+    box-shadow: 0 0 18px 0px rgba(0,0,0,0.3);
   }
   
   p {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 18px;
     text-align: center;
     margin: auto;
   }
@@ -528,19 +318,21 @@
   
   .ib {
     text-align: center;
-    margin-top: 100px;
+    padding-top: 20px;
     position: relative;
   }
   
   .images {
-    max-width: 330px;
+    max-width: 350px;
     height: auto;
     padding: 5px 4px;
     border-radius: 25px;
-    display: flex;
-    margin: 0 13px;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    margin: auto 33px;
     flex-direction: row;
-    align-items: center;
+    flex-wrap: nowrap;
   }
 
 .images-col {
@@ -549,10 +341,11 @@
 }
 
   .images h2 {
-    font-size: 2.2rem;
+    font-size: 34px;
     color: midnightblue;
     font-weight: 600;
-    margin-top: 8px;
+    margin-bottom: 200px;
+    margin-top: 4px;
   }
 
   .images img:hover {
@@ -566,8 +359,7 @@
     min-height: 500px;
     margin: auto;
     text-align: center;
-    padding-top: 100px;
-    margin-top: 110px;
+    padding-top: 150px;
     background-image: linear-gradient(rgba(4,9,20,0.4),rgba(4,9,20,0.4)), 
       url(https://www.istafrica.com/uploaded/home_photos_2021/long/2.jpg);
     background-size: cover;
@@ -580,7 +372,6 @@
 
   .admission p {
     color: white;
-  font-weight: 600;
   }
 
   .admission h1 {
@@ -611,7 +402,7 @@
 .moving-buttons span {
   height: 100%;
   width: 0;
-  border-radius: 25px;
+  border-radius: 20px;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -627,7 +418,6 @@
   border: none;
 }
 
-
 .admission button {
   border: 2.5px solid rgb(128, 210, 74);
 }
@@ -637,6 +427,7 @@
 .apply button {
   border: 2.5px solid rgb(0, 0, 255);
 }
+
 
 .admission span{
   background: rgb(128, 210, 74);
@@ -648,9 +439,6 @@ background: orange;
   background: navy;
 }
 
-.elfsight-app-ff3acc56-2082-4c4b-a820-fb35381f4d73 {
-  width: 300px;
-}
 
 
 
@@ -659,36 +447,27 @@ background: orange;
     width: 87%;
     margin: auto;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 150px;
     min-height: 100vh;
   }
   
   
   .campus-col {
-    border-radius: 15px;
     margin-bottom: 5%;
     flex-basis: 32%;
     overflow: hidden;
     box-sizing: border-box;
   }
-
-  .campus-col:nth-child(2) {
-    position: relative;
-  }
   
   .campus-col img {
     width: 100%;
-    height: auto;
+    max-height: 98%;
     display: flex;
+    border-radius: 15px;
     justify-content: space-between;
     align-items: baseline;
     box-sizing: border-box;
     flex-grow: 1;
-  }
-  
-  .campus-col h3 {
-    padding: 21px;
-    text-align: center;
   }
   
   .science {
@@ -701,14 +480,17 @@ background: orange;
   
   
   .middle h3{
-    font-size: 44px;
-    font-weight: 700;
+    font-size: 45px;
+    font-weight: bold;
     color: navy;
+    padding: 22px;
+    text-align: center;
   }
   
   .row {
     width: 100%;
-    border-radius: 30px;
+    border-radius: 15px;
+    padding-bottom: 160px;
   }
   
   .layer h3 {
@@ -732,14 +514,14 @@ background: orange;
     display: inline-flex;
     color: white;
     text-decoration: none;
-    border: 2px solid white;
+    border: 3px solid orange;
     font-size: 20px;
     font-weight: 600;
     padding: 12px 40px;
     border-radius: 15px;
-    position:absolute;
-    bottom: 5%;
-    right: 20%;
+    position: absolute;
+    bottom: 7%;
+    right: 25%;
     transition: 0.5s;
   }
   
@@ -761,7 +543,6 @@ background: orange;
 
   .partnership h1 {
     font-size: 22px;
-    
   }
 
   .partnership p {
@@ -790,9 +571,9 @@ background: orange;
 .affiliate-box {
   display: block;
   color: transparent;
-  width: 120px;
-  height: 120px;
-  padding: 1px;
+  width: 130px;
+  height: 130px;
+  padding: 3px;
   margin: 6px;
   background-position: center;
   background-size: 100%;
@@ -800,13 +581,7 @@ background: orange;
   box-sizing: border-box;
 }
 
-.affiliate-box:hover {
-  box-sizing:border-box;
-  border: 2.5px solid;
-  border-color:  orange rgb(0, 199, 0) black rgb(0, 0, 196);
-  border-radius: 20%;
-  transition: 0.3s;
-}
+
 
 body {
   overflow-x: hidden;
@@ -868,7 +643,7 @@ label {
   }
 }
 
-.thebutton {
+.button {
   border-radius: 3px;
   color: #FFFFFF;
   display: inline-block;
@@ -881,13 +656,17 @@ label {
   transition: opacity 0.5s ease;
 }
 
-.thebutton:hover {
-  opacity: 0.75;
+.button:hover {
+  opacity: 0.7;
 }
 
 .button-primary {
-  background-color: navy;
+  background-color: #0101ae;
   border-radius: 15px;
+}
+
+.button-secondary {
+  background-color: #FFAA00;
 }
 
 .button-full {
@@ -903,7 +682,7 @@ label {
   background-color: #FFFFFF;
   border-radius: 10px;
   box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.1);
-  padding: 60px 30px 40px;
+  padding: 40px 30px 15px;
 }
 
 input,
@@ -939,12 +718,17 @@ textarea {
   margin-bottom: 20px;
 }
 
+.input-error {
+  border-color: none;
+}
+
+
+
 /* 6. Page Styles
 ======================================== */
 .site-main {
   padding: 60px 15px;
   position: relative;
-  margin-top: 80px;
 }
 
 .col-1-2 {
@@ -956,8 +740,8 @@ textarea {
   background-size: cover;
   background-position: center;
   background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),     
-  url("https://www.istafrica.com/uploaded/images_2017-18/web/ISTSecondaryLetters.png?1534984247760");
-  height: 670px;
+  url("School3.jpeg");
+  height: 650px;
   display: block;
   position: absolute;
   top: 0;
@@ -971,15 +755,9 @@ textarea {
   margin-bottom: 30px;
 }
 
-.site-main-header h1 {
-  color: #FFFFFF;
-  padding-block: 25px;
-  font-size: 55px;
-}
-
+.site-main-header h1,
 .site-main-header p {
-  color: white;
-  padding-bottom: 35px;
+  color: #FFFFFF;
 }
 
 .section-header {
@@ -989,13 +767,19 @@ textarea {
   color: midnightblue;
 }
 
-iframe {
-  width: 630px;
-  height: 405px;
+
+
+.map p {
+color: #0f0f0f;
+display: block;
+font-size: 20px;
+font-weight: 600;
+max-width: 100%;
+padding: 40px 30px 20px;
 }
 
 .footer {
-  background-color: rgb(47, 61, 75);
+  background-color: #234;
   padding: 65px 0;
   line-height: 1.5;
 }
@@ -1010,7 +794,7 @@ iframe {
 }
 
 .footer-col {
-  width: 25% 24% 25% 29% ;
+  width: 25% 24% 21% 30% ;
   padding: 0 70px;
 }
 
@@ -1022,32 +806,24 @@ iframe {
   position: relative;
 }
 
-.footer-col h4::after {
+.footer-col h4::before {
   content: '';
   position: absolute;
-  display: block;
   left: 0;
-  bottom: -10;
-  background-color: rgb(0, 199, 0);
-  height: 4px;
+  bottom: -10px;
+  background-color: rgb(3, 255, 3);
+  height: 3px;
   width: 75px;
 }
 
 .footer-col ul li:not(:last-child) {
-  margin-bottom: 7px;
-}
-
-.footer-col ul li {
-  font-size: 17px;
-  text-decoration: none;
-  font-weight: 400;
-  color: #bbbbbb;
-  display: block;
+  margin-bottom: 10px;
 }
 
 .footer-col ul li a{
   font-size: 17px;
   text-decoration: none;
+  color: white;
   font-weight: 400;
   color: #bbbbbb;
   display: block;
@@ -1060,17 +836,15 @@ iframe {
 }
 
 .footer-col .social-links a {
-  font-size: 24px;
   display: inline-flex;
-  text-decoration: none;
   align-items: center;
   justify-content: center;
   margin: 0 10px 20px 0;
   text-align: center;
   line-height: 80px;
-  height: 48px;
-  width: 48px;
-  background-color: rgb(255, 183, 0);
+  height: 44px;
+  width: 44px;
+  background-color: orange;
   border-radius: 50%;
   color: white;
   position: relative;
